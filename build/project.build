@@ -8,11 +8,8 @@
 	<property name="build.dir" value="${base.dir}\build" />
 	<property name="thirdparty.dir" value="${base.dir}\thirdparty" />
 
-	<property name="build.tools.dir" value="${build.dir}\tools" />
+	<property name="build.tools.dir" value="${thirdparty.dir}\tools" />
 	<property name="build.lib.dir" value="${build.dir}\lib" />
-	<property name="build.resources.dir" value="${build.dir}\resources" />
-	<property name="build.icons.dir" value="${build.resources.dir}\icons" />
-	<property name="build.config.dir" value="${build.dir}\config" />
 	<property name="build.compile.dir" value="${build.dir}\compile" />
 	<property name="build.artifacts.dir" value="${build.dir}\artifacts" />
 	
@@ -20,9 +17,6 @@
 	
 	<include buildfile="project.test.build" />
 	<include buildfile="project.test.reports.build" />
-	<include buildfile="project.deploy.build" />
-	<include buildfile="project.install.build" />
-	<include buildfile="project.ci.build" />
 	<include buildfile="local.properties.xml" />
 		
 	<target name="clean">
@@ -35,10 +29,9 @@
 	</target>
 	
 	<target name="app.compile" depends="init">
-		<csc output="${build.compile.dir}\${app.output}" debug="${debug}" target="library" win32icon="${build.icons.dir}\mokhan.ico" keyfile="${build.config.dir}\mokhan.snk">
+		<csc output="${build.compile.dir}\${app.output}" debug="${debug}" target="library">
 			<sources>
 				<include name="${product.dir}\**\*.cs" />
-				<include name="${build.config.dir}\**\*.cs" />
 				<exclude name="${product.dir}\**\AssemblyInfo.cs" />
 				<exclude name="${product.dir}\**\*Specs.cs" />
 			</sources>			
@@ -46,13 +39,6 @@
 				<include name="${build.lib.dir}\**\*.dll" />
 				<include name="${build.artifacts.dir}\**\*.dll" />
 			</references>
-			<resources dynamicprefix="true">
-				<include name="${product.dir}\**\*.resx" />
-			</resources>
-			<resources>
-				<include name="${build.lib.dir}\app\*.licenses" />
-			</resources>
-			<arg value="/nowin32manifest" />
 		</csc>
 	</target>
 
