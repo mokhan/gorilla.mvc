@@ -2,3 +2,5 @@ bin
 obj
 *.resharper.user
 *.suo
+local.properties.xml
+build/compile

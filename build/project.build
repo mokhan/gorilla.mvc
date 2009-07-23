@@ -6,7 +6,7 @@
 	<property name="product.dir" value="${base.dir}\product" />
 	
 	<property name="build.dir" value="${base.dir}\build" />
-	<property name="thirdparty.dir" value="${base.dir}\thirdparty" />
+	<property name="thirdparty.dir" value="${base.dir}\third.party" />
 
 	<property name="build.tools.dir" value="${thirdparty.dir}\tools" />
 	<property name="build.lib.dir" value="${build.dir}\lib" />

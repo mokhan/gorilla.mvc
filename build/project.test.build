@@ -22,9 +22,6 @@
 				<include name="\**\*.dll" />
 			</fileset>
 		</copy>
-		<property name="target" value="${log4net.config}" />
-		<call target="expand.template.file" />
-		<copy file="${log4net.config}" tofile="${build.compile.dir}\log4net.config.xml" />
 	</target>
 
 	<target name="run.test" depends="test.compile">
