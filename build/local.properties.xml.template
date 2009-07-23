@@ -10,4 +10,5 @@
 	<property name="dot.net.sdk.dir" value="C:\Program Files\Microsoft SDKs\Windows\v6.0A\bin" />
 	<property name="framework.dir" value="c:\windows\microsoft.net\framework\v3.5" />
   
+	<property name="browser.exe" value="c:\program files (x86)\mozilla firefox\firefox.exe" />
 </project>
