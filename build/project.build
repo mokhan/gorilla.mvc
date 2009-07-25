@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
   <project name="gorilla.mvc">	
 	<property name="project.name" value="${project::get-name()}" />
+	<property name="nant.settings.currentframework" value="net-3.5" />
 
 	<property name="base.dir" value="${directory::get-parent-directory(project::get-base-directory())}" />
 	<property name="product.dir" value="${base.dir}\product" />
@@ -9,7 +10,7 @@
 	<property name="thirdparty.dir" value="${base.dir}\third.party" />
 
 	<property name="build.tools.dir" value="${thirdparty.dir}\tools" />
-	<property name="build.lib.dir" value="${build.dir}\lib" />
+	<property name="build.lib.dir" value="${thirdparty.dir}\lib" />
 	<property name="build.compile.dir" value="${build.dir}\compile" />
 	<property name="build.artifacts.dir" value="${build.dir}\artifacts" />
 	
