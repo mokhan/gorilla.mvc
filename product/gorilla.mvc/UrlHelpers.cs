@@ -6,9 +6,9 @@ namespace gorilla.mvc
 {
     public static class UrlHelpers
     {
-        public static string To<Controller>(this UrlHelper helper, Expression<Action<Controller>> url) where Controller : IController
+        public static string to<Controller>(this UrlHelper helper, Expression<Action<Controller>> url) where Controller : IController
         {
-            return Url.To(url);
+            return Url.to(url);
         }
     }
 }

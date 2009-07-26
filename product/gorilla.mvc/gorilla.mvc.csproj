@@ -55,6 +55,7 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -83,7 +84,7 @@
     <Compile Include="Url.cs" />
     <Compile Include="UrlBuilder.cs" />
     <Compile Include="UrlHelpers.cs" />
-    <Compile Include="when_building_a_url.cs" />
+    <Compile Include="UrlSpecs.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
